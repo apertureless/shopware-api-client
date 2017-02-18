@@ -9,9 +9,10 @@
     "start": "gulp",
     "build": "gulp transpile",
     "prepublish": "npm run build",
+    "report-coverage": "nyc report --reporter=lcov | codecov",
     "lint": "xo",
-    "test": "ava --timeout=30s --tap | tap-nyan",
-    "t": "ava --timeout=30s --verbose"
+    "test-only": "ava --timeout=30s --tap | tap-nyan",
+    "test": "npm run lint && ava --timeout=30s --verbose"
   },
   "engines": {
     "node": ">=6.9.0"
@@ -20,14 +21,16 @@
     "failFast": false,
     "files": [
       "test/*.js"
-    ]
+    ],
+    "require": ["babel-core/register"]
   },
   "xo": {
     "esnext": true,
     "space": true,
     "semicolon": false,
     "ignores": [
-      "shopware-api-cli.js"
+      "test/_fixtures/**",
+      "cli/**"
     ],
     "rules": {
       "import/no-unassigned-import": 0,
@@ -43,7 +46,13 @@
   "babel": {
     "presets": [
       "es2015"
-    ]
+    ],
+    "ignore": "test/**",
+    "env": {
+      "development": {
+        "sourceMaps": "inline"
+      }
+    }
   },
   "devDependencies": {
     "ava": "^0.18.1",
@@ -51,15 +60,23 @@
     "babel-cli": "^6.23.0",
     "babel-preset-es2015": "^6.22.0",
     "babel-register": "^6.23.0",
-    "chai": "^3.5.0",
+    "codecov.io": "^0.1.6",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-cached": "^1.1.1",
+    "nyc": "^10.1.2",
     "tap-nyan": "^1.1.0",
     "xo": "^0.17.1"
   },
   "dependencies": {
     "request": "^2.79.0",
     "request-promise-native": "^1.0.3"
+  },
+  "nyc": {
+    "reporter": [
+      "html",
+      "lcov",
+      "text"
+    ]
   }
 }
