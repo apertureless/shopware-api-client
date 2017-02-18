@@ -9,7 +9,9 @@
     "start": "gulp",
     "build": "gulp transpile",
     "prepublish": "npm run build",
-    "report-coverage": "nyc report --reporter=lcov | codecov",
+    "cover": "nyc --reporter lcov --reporter text npm run test",
+    "check-coverage": "nyc check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
+    "report-coverage": "cat ./coverage/lcov.info | codecov",
     "lint": "xo",
     "test-only": "ava --timeout=30s --tap | tap-nyan",
     "test": "npm run lint && ava --timeout=30s --verbose"
@@ -17,6 +19,18 @@
   "engines": {
     "node": ">=6.9.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apertureless/shopware-api-client.git"
+  },
+  "keywords": [
+    "es6",
+    "shopware",
+    "api",
+    "client",
+    "rest",
+    "async"
+  ],
   "ava": {
     "failFast": false,
     "files": [
