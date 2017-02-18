@@ -43,7 +43,8 @@ class Shopware {
     return new Promise((resolve, reject) => {
       this.request(config)
         .then(res => {
-          resolve(res)
+          const responseData = selector ? res[selector] : res
+          resolve(responseData)
         })
         .catch(err => {
           reject(err.message)
@@ -55,7 +56,7 @@ class Shopware {
     return this.handleRequest({
       url: 'articles/',
       method: 'GET'
-    }, 'articles')
+    }, 'data')
   }
 
   getArticle(id) {
@@ -66,7 +67,7 @@ class Shopware {
     return this.handleRequest({
       url: `articles/${id}`,
       method: 'GET'
-    })
+    }, 'data')
   }
 
   deleteArticle(id) {
