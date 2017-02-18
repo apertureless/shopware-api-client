@@ -76,8 +76,8 @@ class Shopware {
     }
 
     return this.handleRequest({
-       url: `articles/${id}`,
-       method: 'DELETE'
+      url: `articles/${id}`,
+      method: 'DELETE'
     })
   }
 

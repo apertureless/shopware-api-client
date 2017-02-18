@@ -10,13 +10,14 @@
     "build": "gulp transpile",
     "prepublish": "npm run build",
     "lint": "xo",
-    "test": "ava --timeout=30s"
+    "test": "ava --timeout=30s --tap | tap-nyan",
+    "t": "ava --timeout=30s --verbose"
   },
   "engines": {
     "node": ">=6.9.0"
   },
   "ava": {
-    "failFast": true,
+    "failFast": false,
     "files": [
       "test/*.js"
     ]
@@ -54,6 +55,7 @@
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-cached": "^1.1.1",
+    "tap-nyan": "^1.1.0",
     "xo": "^0.17.1"
   },
   "dependencies": {
