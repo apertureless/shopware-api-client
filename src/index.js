@@ -81,6 +81,18 @@ class Shopware {
     })
   }
 
+  deleteArticles(ids) {
+    if (!ids) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
+    return this.handleRequest({
+      url: 'articles/',
+      method: 'DELETE',
+      ids
+    })
+  }
+
   createArticle(body) {
     if (!body) {
       return handleError(ERROR.MISSING_BODY)
@@ -89,6 +101,18 @@ class Shopware {
     return this.handleRequest({
       url: 'articles/',
       method: 'POST',
+      body
+    })
+  }
+
+  updateArticle(body) {
+    if (!body) {
+      return handleError(ERROR.MISSING_BODY)
+    }
+
+    return this.handleRequest({
+      url: 'articles/',
+      method: 'PUT',
       body
     })
   }
