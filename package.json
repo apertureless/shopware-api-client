@@ -11,7 +11,7 @@
     "prepublish": "npm run build",
     "cover": "nyc --reporter lcov --reporter text npm run test",
     "check-coverage": "nyc check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
-    "report-coverage": "nyc report --reporter=lcov > coverage.lcov && codecov",
+    "report-coverage": "cat ./coverage/lcov.info | codecov",
     "lint": "xo",
     "test-only": "ava --timeout=30s --tap | tap-nyan",
     "test": "npm run lint && ava --timeout=30s --verbose"
