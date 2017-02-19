@@ -105,13 +105,17 @@ class Shopware {
     })
   }
 
-  updateArticle(body) {
+  updateArticle(id, body) {
+    if (!id) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
     if (!body) {
       return handleError(ERROR.MISSING_BODY)
     }
 
     return this.handleRequest({
-      url: 'articles/',
+      url: `articles/${id}`,
       method: 'PUT',
       body
     })

@@ -8,7 +8,7 @@ const article = {
   },
   'description': 'Schönes Halsband',
   'mainDetail': {
-    'inStock': '12',
+    'inStock': 12,
     'number': '9983',
     'active': true,
     'descriptionLong': 'Eine lange Beschreibung'
@@ -25,7 +25,7 @@ const article2 = {
   },
   'description': 'Schönes Halsband',
   'mainDetail': {
-    'inStock': '12',
+    'inStock': 12,
     'number': '123',
     'active': true,
     'descriptionLong': 'Eine lange Beschreibung'
