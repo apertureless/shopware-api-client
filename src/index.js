@@ -52,6 +52,13 @@ class Shopware {
     })
   }
 
+  version() {
+    return this.handleRequest({
+      url: 'version/',
+      method: 'GET'
+    }, 'data')
+  }
+
   getArticles() {
     return this.handleRequest({
       url: 'articles/',
@@ -119,7 +126,7 @@ class Shopware {
       method: 'PUT',
       body
     })
-  },
+  }
 
   updateArticles(body) {
     if (!body) {
