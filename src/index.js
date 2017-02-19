@@ -119,6 +119,18 @@ class Shopware {
       method: 'PUT',
       body
     })
+  },
+
+  updateArticles(body) {
+    if (!body) {
+      return handleError(ERROR.MISSING_BODY)
+    }
+
+    return this.handleRequest({
+      url: 'articles/',
+      method: 'PUT',
+      body
+    })
   }
 }
 

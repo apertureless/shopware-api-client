@@ -5,7 +5,7 @@
 [![codecov](https://codecov.io/gh/apertureless/shopware-api-client/branch/master/graph/badge.svg)](https://codecov.io/gh/apertureless/shopware-api-client)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 
-Node.js module to interact with the Shopware REST API.
+Node.js module to interact with the [Shopware REST API](https://shopware.com/).
 
 ```bash
 yarn add shopware-api-client -S
@@ -19,7 +19,7 @@ Examples how to use the package
 ```javascript
 import Shopware from 'shopware-api-client'
 
-const api = new Shopware({
+const shop = new Shopware({
     host: 'YOUR HOST',
     user: 'YOUR USER',
     apiKey: 'YOUR APIKEY'
@@ -28,7 +28,7 @@ const api = new Shopware({
 let articles
 
 try {
-  articles = await api.getArticles()
+  articles = await shop.getArticles()
 } catch (err) {
   console.log(error)
 }
@@ -40,7 +40,7 @@ console.log(articles)
 
 ```javascript
 const Shopware = require('shopware-api-client')
-const api = new Shopwarware({
+const shop = new Shopwarware({
   host: 'YOUR HOST',
   user: 'YOUR USER',
   apiKey: 'YOUR APIKEY'
@@ -55,10 +55,94 @@ shop.getArticles()
 ## API Reference
 
 - Shopware
-  - new Shopware([object])
-  - .getArticles([callback]) 🔀 `Promise`
-  - .getArticle(id, [callback]) 🔀 `Promise`
+  - [new Shopware([object])](#new_shopware)
+  - [.getArticles([callback])](#getArticles) 🔀 `Promise`
+  - [.getArticle(id, [callback])](#getArticle) 🔀 `Promise`
   - .deleteArticle(id, [callback]) 🔀 `Promise`
   - .deleteArticles(ids, [callback]) 🔀 `Promise`
   - .createArticle(article, [callback]) 🔀 `Promise`
-  - .updateArticles(article, [callback]) 🔀 `Promise`
+  - .updateArticle(id, article, [callback]) 🔀 `Promise`
+  - .updateArticles(articles, [callback]) 🔀 `Promise`
+
+<a name="new_shopware"></a>
+
+### new Shopware([credentials])
+Initializes the API. With given credentials.
+Host, User and API Key
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [credentials] | <code>Object</code> | Host, User, API Key. |
+
+<a name="getArticles"></a>
+
+### shop.getArticles([callback]) ⇒ <code>Promise</code>
+Returns an array with all articles.
+
+**See**: https://developers.shopware.com/developers-guide/rest-api/api-resource-article/
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [callback] | <code>function</code> | Callback will be called with `(err, articles)` |
+
+<a name="getArticle"></a>
+
+### shop.getArticle(id, [callback]) ⇒ <code>Promise</code>
+Returns an object with article data.
+
+**See**: https://developers.shopware.com/developers-guide/rest-api/api-resource-article/
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | Article id |
+| [callback] | <code>function</code> | Callback will be called with `(err, articles)` |
+
+<a name="deleteArticle"></a>
+
+### shop.deleteArticle(id, [callback]) ⇒ <code>Promise</code>
+Deletes an article and returns it's data.
+
+**See**: https://developers.shopware.com/developers-guide/rest-api/api-resource-article/
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | Article id |
+| [callback] | <code>function</code> | Callback will be called with `(err, success)` |
+
+<a name="deleteArticles"></a>
+
+### shop.deleteArticles(ids, [callback]) ⇒ <code>Promise</code>
+Deletes a batch of articles and returns it's data.
+
+**See**: https://developers.shopware.com/developers-guide/rest-api/api-resource-article/
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>array</code> | Article ids |
+| [callback] | <code>function</code> | Callback will be called with `(err, success)` |
+
+<a name="createArticle"></a>
+
+### shop.createArticles(article, [callback]) ⇒ <code>Promise</code>
+Creates an article and returns its data.
+
+**See**: https://developers.shopware.com/developers-guide/rest-api/api-resource-article/
+
+| Param | Type | Description |
+| --- | --- | --- |
+| article | <code>object</code> | Shopware article model |
+| [callback] | <code>function</code> | Callback will be called with `(err, article)` |
+
+<a name="updateArticle"></a>
+
+### shop.updateArticles(id, article, [callback]) ⇒ <code>Promise</code>
+Updates data of an article.
+
+**See**: https://developers.shopware.com/developers-guide/rest-api/api-resource-article/
+
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | Target article id |
+| article | <code>object</code> | Shopware article model |
+| [callback] | <code>function</code> | Callback will be called with `(err, article)` |
