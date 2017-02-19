@@ -58,10 +58,10 @@ shop.getArticles()
   - [new Shopware([object])](#new_shopware)
   - [.getArticles([callback])](#getArticles) 🔀 `Promise`
   - [.getArticle(id, [callback])](#getArticle) 🔀 `Promise`
-  - .deleteArticle(id, [callback]) 🔀 `Promise`
-  - .deleteArticles(ids, [callback]) 🔀 `Promise`
-  - .createArticle(article, [callback]) 🔀 `Promise`
-  - .updateArticle(id, article, [callback]) 🔀 `Promise`
+  - [.deleteArticle(id, [callback])](#deleteArticle) 🔀 `Promise`
+  - [.deleteArticles(ids, [callback])](#deleteArticles) 🔀 `Promise`
+  - [.createArticle(article, [callback])](#createArticle) 🔀 `Promise`
+  - [.updateArticle(id, article, [callback])](#updateArticle) 🔀 `Promise`
   - .updateArticles(articles, [callback]) 🔀 `Promise`
 
 <a name="new_shopware"></a>
