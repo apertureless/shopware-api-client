@@ -56,6 +56,7 @@ shop.getArticles()
 
 - Shopware
   - [new Shopware([object])](#new_shopware)
+  - [.version([callback])](#version) 🔀 `Promise`
   - [.getArticles([callback])](#getArticles) 🔀 `Promise`
   - [.getArticle(id, [callback])](#getArticle) 🔀 `Promise`
   - [.deleteArticle(id, [callback])](#deleteArticle) 🔀 `Promise`
@@ -74,6 +75,15 @@ Host, User and API Key
 | Param | Type | Description |
 | --- | --- | --- |
 | [credentials] | <code>Object</code> | Host, User, API Key. |
+
+<a name="version"></a>
+
+### shop.version([callback])
+Returns shopware version and revision
+
+| Param | Type | Description |
+| --- | --- | --- |
+| [callback] | <code>function</code> | Callback will be called with `(err, version)` |
 
 <a name="getArticles"></a>
 
