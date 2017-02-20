@@ -77,6 +77,10 @@ shop.getArticles()
   - .deleteVariant(id, [callback]) 🔀 `Promise`
   - .deleteVariants(ids, [callback]) 🔀 `Promise`
   - .generateArticleImages(articleId, [callback]) 🔀 `Promise`
+  - .listMedia([callback]) 🔀 `Promise`
+  - .getMedia(id, [callback]) 🔀 `Promise`
+  - .createMedia(body, [callback]) 🔀 `Promise`
+  - .deleteMedia(id, [callback]) 🔀 `Promise`
 
 <a name="new_shopware"></a>
 

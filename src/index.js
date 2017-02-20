@@ -281,6 +281,46 @@ class Shopware {
     })
   }
 
+  listMedia() {
+    return this.handleRequest({
+      url: 'media/',
+      method: 'GET'
+    }, 'data')
+  }
+
+  getMedia(id) {
+    if (!id) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
+    return this.handleRequest({
+      url: `media/${id}`,
+      method: 'GET'
+    }, 'data')
+  }
+
+  createMedia(body) {
+    if (!body) {
+      return handleError(ERROR.MISSING_BODY)
+    }
+
+    return this.handleRequest({
+      url: 'media/',
+      method: 'POST'
+    })
+  }
+
+  deleteMedia(id) {
+    if (!id) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
+    return this.handleRequest({
+      url: `media/${id}`,
+      method: 'DELETE'
+    })
+  }
+
 }
 
 module.exports = Shopware
