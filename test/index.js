@@ -58,10 +58,9 @@ test.serial('`createCategory(body)`', async t => {
 })
 
 test.serial('`updateCategory(id, body)`', async t => {
-  let newCategory = category
+  const newCategory = category
   newCategory.id = categoryId
   newCategory.name = 'Updated'
-
 
   const res = await api.updateCategory(categoryId, newCategory)
   t.is(res.success, true)
