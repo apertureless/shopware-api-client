@@ -454,7 +454,7 @@ class Shopware {
 
     return this.handleRequest({
       url: `customers/${id}`,
-      method: 'DELETE',
+      method: 'DELETE'
     })
   }
 
