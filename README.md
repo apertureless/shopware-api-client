@@ -81,6 +81,9 @@ shop.getArticles()
   - .getMedia(id, [callback]) 🔀 `Promise`
   - .createMedia(body, [callback]) 🔀 `Promise`
   - .deleteMedia(id, [callback]) 🔀 `Promise`
+  - .getOrders([callback]) 🔀 `Promise`
+  - .getOrder(id, [callback]) 🔀 `Promise`
+  - .updateOrder(id, body, [callback]) 🔀 `Promise`
 
 <a name="new_shopware"></a>
 

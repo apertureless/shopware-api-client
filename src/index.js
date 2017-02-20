@@ -321,6 +321,40 @@ class Shopware {
     })
   }
 
+  getOrders() {
+    return this.handleRequest({
+      url: 'orders/',
+      method: 'GET'
+    }, 'data')
+  }
+
+  getOrder(id) {
+    if (!id) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
+    return this.handleRequest({
+      url: `orders/${id}`,
+      method: 'GET'
+    })
+  }
+
+  updateOrder(id, body) {
+    if (!id) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
+    if (!body) {
+      return handleError(ERROR.MISSING_BODY)
+    }
+
+    return this.handleRequest({
+      url: `orders/${id}`,
+      method: 'PUT',
+      body
+    })
+  }
+
 }
 
 module.exports = Shopware
