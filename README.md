@@ -51,6 +51,24 @@ shop.getArticles()
   .catch(err => console.log(err))
 
 ```
+## Implemented API Resources
+
+- [ ] `/api/addresses`
+- [x] `/api/articles`
+- [ ] `/api/caches`
+- [x] `/api/categories`
+- [ ] `/api/countries`
+- [ ] `/api/customerGroups`
+- [ ] `/api/customers`
+- [x] `/api/generateArticleImages`
+- [x] `/api/media`
+- [ ] `/api/manufacturers`
+- [x] `/api/orders`
+- [ ] `/api/propertyGroups`
+- [ ] `/api/shops`
+- [ ] `/api/translations`
+- [x] `/api/variants`
+- [x] `/api/version`
 
 ## API Reference
 
