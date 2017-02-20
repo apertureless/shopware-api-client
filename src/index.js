@@ -139,6 +139,63 @@ class Shopware {
       body
     })
   }
+
+  getCategories() {
+    return this.handleRequest({
+      url: 'categories/',
+      method: 'GET'
+    }, 'data')
+  }
+
+  getCategory(id) {
+    if (!id) {
+      return handleError(ERROR.MISSING_BODY)
+    }
+
+    return this.handleRequest({
+      url: `categories/${id}`,
+      method: 'GET'
+    }, 'data')
+  }
+
+  createCategory(body) {
+    if (!body) {
+      return handleError(ERROR.MISSING_BODY)
+    }
+
+    return this.handleRequest({
+      url: 'categories/',
+      method: 'POST',
+      body
+    })
+  }
+
+  updateCategory(id, body) {
+    if (!body) {
+      return handleError(ERROR.MISSING_BODY)
+    }
+
+    if (!id) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
+    return this.handleRequest({
+      url: `categories/${id}`,
+      method: 'PUT',
+      body
+    })
+  }
+
+  deleteCategory(id) {
+    if (!id) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
+    return this.handleRequest({
+      url: `categories/${id}`,
+      method: 'DELETE'
+    })
+  }
 }
 
 module.exports = Shopware
