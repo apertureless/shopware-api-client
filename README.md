@@ -69,6 +69,13 @@ shop.getArticles()
   - .createCategory(category, [callback]) 🔀 `Promise`
   - .updateCategory(id, category, [callback]) 🔀 `Promise`
   - .deleteCategory(id, [callback]) 🔀 `Promise`
+  - .getVariants([callback]) 🔀 `Promise`
+  - .getVariants([callback]) 🔀 `Promise`
+  - .getVariant(id, [callback]) 🔀 `Promise`
+  - .updateVariant(id, body, [callback]) 🔀 `Promise`
+  - .createVariant(body, [callback]) 🔀 `Promise`
+  - .deleteVariant(id, [callback]) 🔀 `Promise`
+  - .deleteVariants(ids, [callback]) 🔀 `Promise`
 
 <a name="new_shopware"></a>
 

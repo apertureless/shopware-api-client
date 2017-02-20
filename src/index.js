@@ -196,6 +196,80 @@ class Shopware {
       method: 'DELETE'
     })
   }
+
+  getVariants() {
+    return this.handleRequest({
+      url: 'variants/',
+      method: 'GET'
+    }, 'data')
+  }
+
+  getVariant(id) {
+    if (!id) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
+    return this.handleRequest({
+      url: `variants/${id}`,
+      method: 'GET'
+    }, 'data')
+  }
+
+  updateVariant(id, body) {
+    if (!id) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
+    if (!body) {
+      return handleError(ERROR.MISSING_BODY)
+    }
+
+    return this.handleRequest({
+      url: `variants/{id}`,
+      method: 'PUT',
+      body
+    })
+  }
+
+  createVariant(id, body) {
+    if (!id) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
+    if (!body) {
+      return handleError(ERROR.MISSING_BODY)
+    }
+
+    return this.handleRequest({
+      url: `variants/{id}`,
+      method: 'POST',
+      body
+    })
+  }
+
+  deleteVariant(id) {
+    if (!id) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
+    return this.handleRequest({
+      url: `variants/{id}`,
+      method: 'DELETE'
+    })
+  }
+
+  deleteVariants(ids) {
+    if (!ids) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
+    return this.handleRequest({
+      url: `variants/`,
+      method: 'DELETE',
+      ids
+    })
+  }
+
 }
 
 module.exports = Shopware
