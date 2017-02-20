@@ -64,6 +64,11 @@ shop.getArticles()
   - [.createArticle(article, [callback])](#createArticle) 🔀 `Promise`
   - [.updateArticle(id, article, [callback])](#updateArticle) 🔀 `Promise`
   - .updateArticles(articles, [callback]) 🔀 `Promise`
+  - .getCategories([callback]) 🔀 `Promise`
+  - .getCategory(id, [callback]) 🔀 `Promise`
+  - .createCategory(category, [callback]) 🔀 `Promise`
+  - .updateCategory(id, category, [callback]) 🔀 `Promise`
+  - .deleteCategory(id, [callback]) 🔀 `Promise`
 
 <a name="new_shopware"></a>
 
