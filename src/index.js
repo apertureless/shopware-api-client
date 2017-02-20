@@ -270,6 +270,17 @@ class Shopware {
     })
   }
 
+  generateArticleImages(id) {
+    if (!id) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
+    return this.handleRequest({
+      url: `generateArticleImages/{id}`,
+      method: 'PUT'
+    })
+  }
+
 }
 
 module.exports = Shopware
