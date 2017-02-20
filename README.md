@@ -55,11 +55,11 @@ shop.getArticles()
 
 - [x] `/api/addresses`
 - [x] `/api/articles`
-- [ ] `/api/caches`
+- [x] `/api/caches`
 - [x] `/api/categories`
 - [ ] `/api/countries`
 - [ ] `/api/customerGroups`
-- [ ] `/api/customers`
+- [x] `/api/customers`
 - [x] `/api/generateArticleImages`
 - [x] `/api/media`
 - [ ] `/api/manufacturers`
@@ -107,6 +107,15 @@ shop.getArticles()
   - .createAddress(body, [callback]) 🔀 `Promise`
   - .updateAddress(id, body, [callback]) 🔀 `Promise`
   - .deleteAddress(id, [callback]) 🔀 `Promise`
+  - .getCustomers([callback]) 🔀 `Promise`
+  - .getCustomer(id, [callback]) 🔀 `Promise`
+  - .createCustomer(body, [callback]) 🔀 `Promise`
+  - .updateCustomer(id, body, [callback]) 🔀 `Promise`
+  - .deleteCustomer(id, [callback]) 🔀 `Promise`
+  - .getCaches([callback]) 🔀 `Promise`
+  - .getCache(id, [callback]) 🔀 `Promise`
+  - .deleteCache(id, [callback]) 🔀 `Promise`
+  - .deleteCaches([callback]) 🔀 `Promise`
 
 <a name="new_shopware"></a>
 

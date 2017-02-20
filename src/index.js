@@ -401,6 +401,99 @@ class Shopware {
     }, 'data')
   }
 
+  getCustomers() {
+    return this.handleRequest({
+      url: 'customers/',
+      method: 'GET'
+    }, 'data')
+  }
+
+  getCustomer(id) {
+    if (!id) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
+    return this.handleRequest({
+      url: `customers/${id}`,
+      method: 'GET'
+    }, 'data')
+  }
+
+  createCustomer(body) {
+    if (!body) {
+      return handleError(ERROR.MISSING_BODY)
+    }
+
+    return this.handleRequest({
+      url: 'customers/',
+      method: 'POST',
+      body
+    })
+  }
+
+  updateCustomer(id, body) {
+    if (!id) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
+    if (!body) {
+      return handleError(ERROR.MISSING_BODY)
+    }
+
+    return this.handleRequest({
+      url: `customers/${id}`,
+      method: 'PUT',
+      body
+    })
+  }
+
+  deleteCustomer(id) {
+    if (!id) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
+    return this.handleRequest({
+      url: `customers/${id}`,
+      method: 'DELETE',
+    })
+  }
+
+  getCaches() {
+    return this.handleRequest({
+      url: 'caches/',
+      method: 'GET'
+    }, 'data')
+  }
+
+  getCache(id) {
+    if (!id) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
+    return this.handleRequest({
+      url: `caches/${id}`,
+      method: 'GET'
+    }, 'data')
+  }
+
+  deleteCache(id) {
+    if (!id) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
+    return this.handleRequest({
+      url: `caches/${id}`,
+      method: 'DELETE'
+    })
+  }
+
+  deleteCaches() {
+    return this.handleRequest({
+      url: 'caches/',
+      method: 'DELETE'
+    })
+  }
+
 }
 
 module.exports = Shopware
