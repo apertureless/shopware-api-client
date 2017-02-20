@@ -12,7 +12,7 @@ yarn add shopware-api-client -S
 ```
 
 ## Examples
-Examples how to use the package
+Examples how to use the package:
 
 ### ES2015
 
