@@ -355,6 +355,52 @@ class Shopware {
     })
   }
 
+  getAddresses() {
+    return this.handleRequest({
+      url: 'addresses/',
+      method: 'GET'
+    }, 'data')
+  }
+
+  createAddress(body) {
+    if (!body) {
+      return handleError(ERROR.MISSING_BODY)
+    }
+
+    return this.handleRequest({
+      url: 'addresses/',
+      method: 'POST',
+      body
+    })
+  }
+
+  updateAddress(id, body) {
+    if (!id) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
+    if (!body) {
+      return handleError(ERROR.MISSING_BODY)
+    }
+
+    return this.handleRequest({
+      url: `addresses/${id}`,
+      method: 'PUT',
+      body
+    })
+  }
+
+  deleteAddress(id) {
+    if (!id) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
+    return this.handleRequest({
+      url: `addresses/${id}`,
+      method: 'DELETE'
+    }, 'data')
+  }
+
 }
 
 module.exports = Shopware

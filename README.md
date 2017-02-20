@@ -53,7 +53,7 @@ shop.getArticles()
 ```
 ## Implemented API Resources
 
-- [ ] `/api/addresses`
+- [x] `/api/addresses`
 - [x] `/api/articles`
 - [ ] `/api/caches`
 - [x] `/api/categories`
@@ -102,6 +102,11 @@ shop.getArticles()
   - .getOrders([callback]) 🔀 `Promise`
   - .getOrder(id, [callback]) 🔀 `Promise`
   - .updateOrder(id, body, [callback]) 🔀 `Promise`
+  - .getAddresses([callback]) 🔀 `Promise`
+  - .getAddress(id, [callback]) 🔀 `Promise`
+  - .createAddress(body, [callback]) 🔀 `Promise`
+  - .updateAddress(id, body, [callback]) 🔀 `Promise`
+  - .deleteAddress(id, [callback]) 🔀 `Promise`
 
 <a name="new_shopware"></a>
 
