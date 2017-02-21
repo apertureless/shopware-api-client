@@ -57,7 +57,7 @@ shop.getArticles()
 - [x] `/api/articles`
 - [x] `/api/caches`
 - [x] `/api/categories`
-- [ ] `/api/countries`
+- [x] `/api/countries`
 - [ ] `/api/customerGroups`
 - [x] `/api/customers`
 - [x] `/api/generateArticleImages`
@@ -116,6 +116,11 @@ shop.getArticles()
   - .getCache(id, [callback]) 🔀 `Promise`
   - .deleteCache(id, [callback]) 🔀 `Promise`
   - .deleteCaches([callback]) 🔀 `Promise`
+  - .getCountries([callback]) 🔀 `Promise`
+  - .getCountry(id, [callback]) 🔀 `Promise`
+  - .updateCountry(id, body, [callback]) 🔀 `Promise`
+  - .createCountry(body, [callback]) 🔀 `Promise`
+  - .deleteCountry(id, [callback]) 🔀 `Promise`
 
 <a name="new_shopware"></a>
 

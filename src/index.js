@@ -494,6 +494,63 @@ class Shopware {
     })
   }
 
+  getCountries() {
+    return this.handleRequest({
+      url: 'countries/',
+      method: 'GET'
+    }, 'data')
+  }
+
+  getCountry(id) {
+    if (!id) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
+    return this.handleRequest({
+      url: `countries/${id}`,
+      method: 'GET'
+    }, 'data')
+  }
+
+  createCountry(body) {
+    if (!body) {
+      return handleError(ERROR.MISSING_BODY)
+    }
+
+    return this.handleRequest({
+      url: 'countries/',
+      method: 'POST',
+      body
+    })
+  }
+
+  updateCountry(id, body) {
+    if (!id) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
+    if (!body) {
+      return handleError(ERROR.MISSING_BODY)
+    }
+
+    return this.handleRequest({
+      url: `countries/${id}`,
+      method: 'PUT',
+      body
+    })
+  }
+
+  deleteCountry(id) {
+    if (!id) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
+    return this.handleRequest({
+      url: `countries/${id}`,
+      method: 'DELETE'
+    })
+  }
+
 }
 
 module.exports = Shopware
