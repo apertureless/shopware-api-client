@@ -779,6 +779,67 @@ class Shopware {
     })
   }
 
+  getTranslations() {
+    return this.handleRequest({
+      url: 'translations/',
+      method: 'GET'
+    }, 'data')
+  }
+
+  getTranslation(id) {
+    if (!id) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
+    return this.handleRequest({
+      url: `translations/${id}`,
+      method: 'GET'
+    }, 'data')
+  }
+
+  createTranslation(id, body) {
+    if (!id) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
+    if (!body) {
+      return handleError(ERROR.MISSING_BODY)
+    }
+
+    return this.handleRequest({
+      url: `translations/${id}`,
+      method: 'POST',
+      body
+    })
+  }
+
+  updateTranslation(id, body) {
+    if (!id) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
+    if (!body) {
+      return handleError(ERROR.MISSING_BODY)
+    }
+
+    return this.handleRequest({
+      url: `translations/${id}`,
+      method: 'PUT',
+      body
+    })
+  }
+
+  deleteTranslation(id) {
+    if (!id) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
+    return this.handleRequest({
+      url: `translations/${id}`,
+      method: 'DELETE'
+    })
+  }
+
 }
 
 module.exports = Shopware

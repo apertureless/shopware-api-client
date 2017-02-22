@@ -66,7 +66,7 @@ shop.getArticles()
 - [x] `/api/orders`
 - [x] `/api/propertyGroups`
 - [x] `/api/shops`
-- [ ] `/api/translations`
+- [x] `/api/translations`
 - [x] `/api/variants`
 - [x] `/api/version`
 
@@ -141,6 +141,11 @@ shop.getArticles()
   - .createShop(body, [callback]) 🔀 `Promise`
   - .updateShop(id, body, [callback]) 🔀 `Promise`
   - .deleteShop(id, [callback]) 🔀 `Promise`
+  - .getTranslations([callback]) 🔀 `Promise`
+  - .getTranslation(id, [callback]) 🔀 `Promise`
+  - .createTranslation(id, body, [callback]) 🔀 `Promise`
+  - .updateTranslation(id, body, [callback]) 🔀 `Promise`
+  - .deleteTranslation(id, [callback]) 🔀 `Promise`
 
 <a name="new_shopware"></a>
 
