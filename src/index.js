@@ -665,6 +665,63 @@ class Shopware {
     })
   }
 
+  getpropertyGroups() {
+    return this.handleRequest({
+      url: 'propertyGroups/',
+      method: 'GET'
+    }, 'data')
+  }
+
+  getpropertyGroup(id) {
+    if (!id) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
+    return this.handleRequest({
+      url: `propertyGroups/${id}`,
+      method: 'GET'
+    }, 'data')
+  }
+
+  createpropertyGroup(body) {
+    if (!body) {
+      return handleError(ERROR.MISSING_BODY)
+    }
+
+    return this.handleRequest({
+      url: 'propertyGroups/',
+      method: 'POST',
+      body
+    })
+  }
+
+  updatepropertyGroup(id, body) {
+    if (!id) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
+    if (!body) {
+      return handleError(ERROR.MISSING_BODY)
+    }
+
+    return this.handleRequest({
+      url: `propertyGroups/${id}`,
+      method: 'PUT',
+      body
+    })
+  }
+
+  deletepropertyGroup(id) {
+    if (!id) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
+    return this.handleRequest({
+      url: `propertyGroups/${id}`,
+      method: 'DELETE'
+    })
+  }
+
 }
 
 module.exports = Shopware

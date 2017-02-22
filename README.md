@@ -64,7 +64,7 @@ shop.getArticles()
 - [x] `/api/media`
 - [x] `/api/manufacturers`
 - [x] `/api/orders`
-- [ ] `/api/propertyGroups`
+- [x] `/api/propertyGroups`
 - [ ] `/api/shops`
 - [ ] `/api/translations`
 - [x] `/api/variants`
@@ -131,6 +131,11 @@ shop.getArticles()
   - .createManufacturer(body, [callback]) 🔀 `Promise`
   - .updateManufacturer(id, body, [callback]) 🔀 `Promise`
   - .deleteManufacturer(id, [callback]) 🔀 `Promise`
+  - .getpropertyGroups([callback]) 🔀 `Promise`
+  - .getpropertyGroup(id, [callback]) 🔀 `Promise`
+  - .createpropertyGroup(body, [callback]) 🔀 `Promise`
+  - .updatepropertyGroup(id, body, [callback]) 🔀 `Promise`
+  - .deletepropertyGroup(id, [callback]) 🔀 `Promise`
 
 <a name="new_shopware"></a>
 
