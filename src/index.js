@@ -551,6 +551,63 @@ class Shopware {
     })
   }
 
+  getCustomerGroups() {
+    return this.handleRequest({
+      url: 'customerGroups/',
+      method: 'GET'
+    }, 'data')
+  }
+
+  getCustomerGroup(id) {
+    if (!id) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
+    return this.handleRequest({
+      url: `customerGroups/${id}`,
+      method: 'GET'
+    }, 'data')
+  }
+
+  createCustomerGroup(body) {
+    if (!body) {
+      return handleError(ERROR.MISSING_BODY)
+    }
+
+    return this.handleRequest({
+      url: 'customerGroups/',
+      method: 'POST',
+      body
+    })
+  }
+
+  updateCustomerGroup(id, body) {
+    if (!id) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
+    if (!body) {
+      return handleError(ERROR.MISSING_BODY)
+    }
+
+    return this.handleRequest({
+      url: `customerGroups/${id}`,
+      method: 'PUT',
+      body
+    })
+  }
+
+  deleteCustomerGroup(id) {
+    if (!id) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
+    return this.handleRequest({
+      url: `customerGroups/${id}`,
+      method: 'DELETE'
+    })
+  }
+
 }
 
 module.exports = Shopware
