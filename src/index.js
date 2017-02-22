@@ -608,6 +608,63 @@ class Shopware {
     })
   }
 
+  getManufacturers() {
+    return this.handleRequest({
+      url: 'manufacturers/',
+      method: 'GET'
+    }, 'data')
+  }
+
+  getManufacturer(id) {
+    if (!id) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
+    return this.handleRequest({
+      url: `manufacturers/${id}`,
+      method: 'GET'
+    }, 'data')
+  }
+
+  createManufacturer(body) {
+    if (!body) {
+      return handleError(ERROR.MISSING_BODY)
+    }
+
+    return this.handleRequest({
+      url: 'manufacturers/',
+      method: 'POST',
+      body
+    })
+  }
+
+  updateManufacturer(id, body) {
+    if (!id) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
+    if (!body) {
+      return handleError(ERROR.MISSING_BODY)
+    }
+
+    return this.handleRequest({
+      url: `manufacturers/${id}`,
+      method: 'PUT',
+      body
+    })
+  }
+
+  deleteManufacturer(id) {
+    if (!id) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
+    return this.handleRequest({
+      url: `manufacturers/${id}`,
+      method: 'DELETE'
+    })
+  }
+
 }
 
 module.exports = Shopware

@@ -62,7 +62,7 @@ shop.getArticles()
 - [x] `/api/customers`
 - [x] `/api/generateArticleImages`
 - [x] `/api/media`
-- [ ] `/api/manufacturers`
+- [x] `/api/manufacturers`
 - [x] `/api/orders`
 - [ ] `/api/propertyGroups`
 - [ ] `/api/shops`
@@ -126,6 +126,11 @@ shop.getArticles()
   - .createCustomerGroup(body, [callback]) 🔀 `Promise`
   - .updateCustomerGroup(id, body, [callback]) 🔀 `Promise`
   - .deleteCustomerGroup(id, [callback]) 🔀 `Promise`
+  - .getManufacturers([callback]) 🔀 `Promise`
+  - .getManufacturer(id, [callback]) 🔀 `Promise`
+  - .createManufacturer(body, [callback]) 🔀 `Promise`
+  - .updateManufacturer(id, body, [callback]) 🔀 `Promise`
+  - .deleteManufacturer(id, [callback]) 🔀 `Promise`
 
 <a name="new_shopware"></a>
 
