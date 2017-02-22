@@ -65,7 +65,7 @@ shop.getArticles()
 - [x] `/api/manufacturers`
 - [x] `/api/orders`
 - [x] `/api/propertyGroups`
-- [ ] `/api/shops`
+- [x] `/api/shops`
 - [ ] `/api/translations`
 - [x] `/api/variants`
 - [x] `/api/version`
@@ -131,11 +131,16 @@ shop.getArticles()
   - .createManufacturer(body, [callback]) 🔀 `Promise`
   - .updateManufacturer(id, body, [callback]) 🔀 `Promise`
   - .deleteManufacturer(id, [callback]) 🔀 `Promise`
-  - .getpropertyGroups([callback]) 🔀 `Promise`
-  - .getpropertyGroup(id, [callback]) 🔀 `Promise`
-  - .createpropertyGroup(body, [callback]) 🔀 `Promise`
-  - .updatepropertyGroup(id, body, [callback]) 🔀 `Promise`
-  - .deletepropertyGroup(id, [callback]) 🔀 `Promise`
+  - .getPropertyGroups([callback]) 🔀 `Promise`
+  - .getPropertyGroup(id, [callback]) 🔀 `Promise`
+  - .createPropertyGroup(body, [callback]) 🔀 `Promise`
+  - .updatePropertyGroup(id, body, [callback]) 🔀 `Promise`
+  - .deletePropertyGroup(id, [callback]) 🔀 `Promise`
+  - .getShops([callback]) 🔀 `Promise`
+  - .getShop(id, [callback]) 🔀 `Promise`
+  - .createShop(body, [callback]) 🔀 `Promise`
+  - .updateShop(id, body, [callback]) 🔀 `Promise`
+  - .deleteShop(id, [callback]) 🔀 `Promise`
 
 <a name="new_shopware"></a>
 

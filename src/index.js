@@ -665,14 +665,14 @@ class Shopware {
     })
   }
 
-  getpropertyGroups() {
+  getPropertyGroups() {
     return this.handleRequest({
       url: 'propertyGroups/',
       method: 'GET'
     }, 'data')
   }
 
-  getpropertyGroup(id) {
+  getPropertyGroup(id) {
     if (!id) {
       return handleError(ERROR.MISSING_ID)
     }
@@ -683,7 +683,7 @@ class Shopware {
     }, 'data')
   }
 
-  createpropertyGroup(body) {
+  createPropertyGroup(body) {
     if (!body) {
       return handleError(ERROR.MISSING_BODY)
     }
@@ -695,7 +695,7 @@ class Shopware {
     })
   }
 
-  updatepropertyGroup(id, body) {
+  updatePropertyGroup(id, body) {
     if (!id) {
       return handleError(ERROR.MISSING_ID)
     }
@@ -711,13 +711,70 @@ class Shopware {
     })
   }
 
-  deletepropertyGroup(id) {
+  deletePropertyGroup(id) {
     if (!id) {
       return handleError(ERROR.MISSING_ID)
     }
 
     return this.handleRequest({
       url: `propertyGroups/${id}`,
+      method: 'DELETE'
+    })
+  }
+
+  getShops() {
+    return this.handleRequest({
+      url: 'shops/',
+      method: 'GET'
+    }, 'data')
+  }
+
+  getShop(id) {
+    if (!id) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
+    return this.handleRequest({
+      url: `shops/${id}`,
+      method: 'GET'
+    }, 'data')
+  }
+
+  createShop(body) {
+    if (!body) {
+      return handleError(ERROR.MISSING_BODY)
+    }
+
+    return this.handleRequest({
+      url: 'shops/',
+      method: 'POST',
+      body
+    })
+  }
+
+  updateShop(id, body) {
+    if (!id) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
+    if (!body) {
+      return handleError(ERROR.MISSING_BODY)
+    }
+
+    return this.handleRequest({
+      url: `shops/${id}`,
+      method: 'PUT',
+      body
+    })
+  }
+
+  deleteShop(id) {
+    if (!id) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
+    return this.handleRequest({
+      url: `shops/${id}`,
       method: 'DELETE'
     })
   }
