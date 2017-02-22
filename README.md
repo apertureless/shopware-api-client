@@ -4,6 +4,7 @@
 [![Build Status](https://travis-ci.org/apertureless/shopware-api-client.svg?branch=master)](https://travis-ci.org/apertureless/shopware-api-client)
 [![codecov](https://codecov.io/gh/apertureless/shopware-api-client/branch/master/graph/badge.svg)](https://codecov.io/gh/apertureless/shopware-api-client)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/apertureless/shopware-api-client/blob/master/LICENSE.txt)
 
 Node.js module to interact with the [Shopware REST API](https://shopware.com/).
 
@@ -238,3 +239,15 @@ Updates data of an article.
 | id | <code>string</code> | Target article id |
 | article | <code>object</code> | Shopware article model |
 | [callback] | <code>function</code> | Callback will be called with `(err, article)` |
+
+## Contributing
+
+1. Fork it ( https://github.com/apertureless/shopware-api-client/fork )
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create a new Pull Request
+
+## License
+
+This software is distributed under [MIT license](LICENSE.txt).
