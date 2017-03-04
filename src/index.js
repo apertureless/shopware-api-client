@@ -321,10 +321,11 @@ class Shopware {
     })
   }
 
-  getOrders() {
+  getOrders(params) {
     return this.handleRequest({
       url: 'orders/',
-      method: 'GET'
+      method: 'GET',
+      params
     }, 'data')
   }
 
