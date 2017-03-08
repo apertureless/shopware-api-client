@@ -52,6 +52,10 @@ shop.getArticles()
   .catch(err => console.log(err))
 
 ```
+
+## Docs
+Find the [docs here](https://apertureless.github.io/shopware-api-client/#/) *contributions welcome*
+
 ## Implemented API Resources
 
 - [x] `/api/addresses`
