@@ -86,7 +86,7 @@
     "gulp-cached": "^1.1.1",
     "nyc": "^10.1.2",
     "tap-nyan": "^1.1.0",
-    "xo": "^0.17.1"
+    "xo": "^0.18.0"
   },
   "dependencies": {
     "request": "^2.79.0",
