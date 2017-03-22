@@ -10,7 +10,7 @@
 Node.js module to interact with the [Shopware REST API](https://shopware.com/).
 
 ```bash
-yarn add shopware-api-client -S
+yarn add shopware-api-client
 ```
 
 ## Examples
