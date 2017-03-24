@@ -1,6 +1,5 @@
 # 🛍 Shopware API Client
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/apertureless/shopware-api-client.svg)](https://greenkeeper.io/)
 [![npm version](https://badge.fury.io/js/shopware-api-client.svg)](https://badge.fury.io/js/shopware-api-client)
 [![Build Status](https://travis-ci.org/apertureless/shopware-api-client.svg?branch=master)](https://travis-ci.org/apertureless/shopware-api-client)
 [![codecov](https://codecov.io/gh/apertureless/shopware-api-client/branch/master/graph/badge.svg)](https://codecov.io/gh/apertureless/shopware-api-client)
