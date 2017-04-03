@@ -41,7 +41,7 @@ console.log(articles)
 
 ```javascript
 const Shopware = require('shopware-api-client')
-const shop = new Shopwarware({
+const shop = new Shopware({
   host: 'YOUR HOST',
   user: 'YOUR USER',
   apiKey: 'YOUR APIKEY'
