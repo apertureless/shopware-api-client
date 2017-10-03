@@ -325,7 +325,7 @@ class Shopware {
     return this.handleRequest({
       url: 'orders/',
       method: 'GET',
-      params
+      qs: params
     }, 'data')
   }
 
