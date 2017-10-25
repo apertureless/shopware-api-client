@@ -149,7 +149,7 @@ class Shopware {
 
   getCategory(id) {
     if (!id) {
-      return handleError(ERROR.MISSING_BODY)
+      return handleError(ERROR.MISSING_ID)
     }
 
     return this.handleRequest({
@@ -225,7 +225,7 @@ class Shopware {
     }
 
     return this.handleRequest({
-      url: `variants/{id}`,
+      url: `variants/${id}`,
       method: 'PUT',
       body
     })
@@ -241,7 +241,7 @@ class Shopware {
     }
 
     return this.handleRequest({
-      url: `variants/{id}`,
+      url: `variants/${id}`,
       method: 'POST',
       body
     })
@@ -253,7 +253,7 @@ class Shopware {
     }
 
     return this.handleRequest({
-      url: `variants/{id}`,
+      url: `variants/${id}`,
       method: 'DELETE'
     })
   }
@@ -276,7 +276,7 @@ class Shopware {
     }
 
     return this.handleRequest({
-      url: `generateArticleImages/{id}`,
+      url: `generateArticleImages/${id}`,
       method: 'PUT'
     })
   }
@@ -306,7 +306,8 @@ class Shopware {
 
     return this.handleRequest({
       url: 'media/',
-      method: 'POST'
+      method: 'POST',
+      body
     })
   }
 
