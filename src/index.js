@@ -59,10 +59,11 @@ class Shopware {
     }, 'data')
   }
 
-  getArticles() {
+  getArticles(params) {
     return this.handleRequest({
       url: 'articles/',
-      method: 'GET'
+      method: 'GET',
+      qs: params
     }, 'data')
   }
 
@@ -140,10 +141,11 @@ class Shopware {
     })
   }
 
-  getCategories() {
+  getCategories(params) {
     return this.handleRequest({
       url: 'categories/',
-      method: 'GET'
+      method: 'GET',
+      qs: params
     }, 'data')
   }
 
@@ -197,10 +199,11 @@ class Shopware {
     })
   }
 
-  getVariants() {
+  getVariants(params) {
     return this.handleRequest({
       url: 'variants/',
-      method: 'GET'
+      method: 'GET',
+      qs: params
     }, 'data')
   }
 
@@ -281,10 +284,11 @@ class Shopware {
     })
   }
 
-  listMedia() {
+  listMedia(params) {
     return this.handleRequest({
       url: 'media/',
-      method: 'GET'
+      method: 'GET',
+      qs: params
     }, 'data')
   }
 
@@ -357,10 +361,11 @@ class Shopware {
     })
   }
 
-  getAddresses() {
+  getAddresses(params) {
     return this.handleRequest({
       url: 'addresses/',
-      method: 'GET'
+      method: 'GET',
+      qs: params
     }, 'data')
   }
 
@@ -403,10 +408,11 @@ class Shopware {
     }, 'data')
   }
 
-  getCustomers() {
+  getCustomers(params) {
     return this.handleRequest({
       url: 'customers/',
-      method: 'GET'
+      method: 'GET',
+      qs: params
     }, 'data')
   }
 
@@ -460,10 +466,11 @@ class Shopware {
     })
   }
 
-  getCaches() {
+  getCaches(params) {
     return this.handleRequest({
       url: 'caches/',
-      method: 'GET'
+      method: 'GET',
+      qs: params
     }, 'data')
   }
 
@@ -496,10 +503,11 @@ class Shopware {
     })
   }
 
-  getCountries() {
+  getCountries(params) {
     return this.handleRequest({
       url: 'countries/',
-      method: 'GET'
+      method: 'GET',
+      qs: params
     }, 'data')
   }
 
@@ -553,10 +561,11 @@ class Shopware {
     })
   }
 
-  getCustomerGroups() {
+  getCustomerGroups(params) {
     return this.handleRequest({
       url: 'customerGroups/',
-      method: 'GET'
+      method: 'GET',
+      qs: params
     }, 'data')
   }
 
@@ -610,10 +619,11 @@ class Shopware {
     })
   }
 
-  getManufacturers() {
+  getManufacturers(params) {
     return this.handleRequest({
       url: 'manufacturers/',
-      method: 'GET'
+      method: 'GET',
+      qs: params
     }, 'data')
   }
 
@@ -667,10 +677,11 @@ class Shopware {
     })
   }
 
-  getPropertyGroups() {
+  getPropertyGroups(params) {
     return this.handleRequest({
       url: 'propertyGroups/',
-      method: 'GET'
+      method: 'GET',
+      qs: params
     }, 'data')
   }
 
@@ -724,10 +735,11 @@ class Shopware {
     })
   }
 
-  getShops() {
+  getShops(params) {
     return this.handleRequest({
       url: 'shops/',
-      method: 'GET'
+      method: 'GET',
+      qs: params
     }, 'data')
   }
 
@@ -781,10 +793,11 @@ class Shopware {
     })
   }
 
-  getTranslations() {
+  getTranslations(params) {
     return this.handleRequest({
       url: 'translations/',
-      method: 'GET'
+      method: 'GET',
+      qs: params
     }, 'data')
   }
 
