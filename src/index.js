@@ -315,6 +315,22 @@ class Shopware {
     })
   }
 
+  updateMedia(id, body) {
+    if (!id) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
+    if (!body) {
+      return handleError(ERROR.MISSING_BODY)
+    }
+
+    return this.handleRequest({
+      url: `media/${id}`,
+      method: 'PUT',
+      body
+    })
+  }
+
   deleteMedia(id) {
     if (!id) {
       return handleError(ERROR.MISSING_ID)
