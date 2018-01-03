@@ -28,6 +28,7 @@
   - .listMedia([callback]) 🔀 `Promise`
   - .getMedia(id, [callback]) 🔀 `Promise`
   - .createMedia(body, [callback]) 🔀 `Promise`
+  - .updateMedia(id, body, [callback]) 🔀 `Promise`
   - .deleteMedia(id, [callback]) 🔀 `Promise`
   - .getOrders([callback]) 🔀 `Promise`
   - .getOrder(id, [callback]) 🔀 `Promise`

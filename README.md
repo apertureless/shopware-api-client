@@ -103,6 +103,7 @@ Find the [docs here](https://apertureless.github.io/shopware-api-client/#/) *con
   - .generateArticleImages(articleId, [callback]) 🔀 `Promise`
   - .listMedia([callback]) 🔀 `Promise`
   - .getMedia(id, [callback]) 🔀 `Promise`
+  - .updateMedia(id, body, [callback]) 🔀 `Promise`
   - .createMedia(body, [callback]) 🔀 `Promise`
   - .deleteMedia(id, [callback]) 🔀 `Promise`
   - .getOrders([callback]) 🔀 `Promise`
