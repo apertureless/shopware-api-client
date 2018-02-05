@@ -376,6 +376,18 @@ class Shopware {
       body
     })
   }
+  
+  createOrder(body) {
+    if (!body) {
+      return handleError(ERROR.MISSING_BODY)
+    }
+
+    return this.handleRequest({
+      url: `orders/`,
+      method: 'POST',
+      body
+    })
+  }
 
   getAddresses(params) {
     return this.handleRequest({
