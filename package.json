@@ -89,7 +89,7 @@
     "xo": "^0.18.2"
   },
   "dependencies": {
-    "request": "^2.81.0",
+    "request": "^2.87.0",
     "request-promise-native": "^1.0.4"
   },
   "nyc": {
