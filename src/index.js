@@ -78,6 +78,17 @@ class Shopware {
     }, 'data')
   }
 
+  getArticleByOrdernumber(ordernumber) {
+    if(!ordernumber) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
+    return this.handleRequest({
+      url: `articles/${ordernumber}?useNumberAsId=true`,
+      method: 'GET'
+    })
+  }
+
   deleteArticle(id) {
     if (!id) {
       return handleError(ERROR.MISSING_ID)
@@ -361,6 +372,17 @@ class Shopware {
     })
   }
 
+  getOrderByOrdernumber(ordernumber) {
+    if (!ordernumber) {
+      return handleError(ERROR.MISSING_ID)
+    }
+
+    return this.handleRequest({
+      url: `orders/${ordernumber}?useNumberAsId=true`,
+      method: 'GET'
+    })
+  }
+
   updateOrder(id, body) {
     if (!id) {
       return handleError(ERROR.MISSING_ID)
@@ -376,7 +398,7 @@ class Shopware {
       body
     })
   }
-  
+
   createOrder(body) {
     if (!body) {
       return handleError(ERROR.MISSING_BODY)
