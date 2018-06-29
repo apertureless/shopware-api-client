@@ -1,5 +1,25 @@
 # Shopware API Docs
 
+## List of API Resources
+
+- [Address](#address)
+- [Article](#article)
+- [Cache](#cache)
+- [Categories](#categories)
+- [Countries](#countries)
+- [CustomerGroups](#customergroups)
+- [Customer](#customer)
+- [GenerateArticleImage](#generatearticleimage)
+- [Media](#media)
+- [Manufacturers](#manufacturers)
+- [Orders](#orders)
+- [PropertyGroups](#propertygroups)
+- [Shops](#shops)
+- [Translations](#translations)
+- [Users](#users)
+- [Variants](#variants)
+- [Version](#version)
+
 ## API Reference
 
 - Shopware
@@ -78,6 +98,9 @@
   - .updateTranslation(id, body, [callback]) 🔀 `Promise`
   - .deleteTranslation(id, [callback]) 🔀 `Promise`
 
+
+## Address
+coming soon
 
 ## Article
 <a name="new_shopware"></a>
@@ -172,7 +195,48 @@ Updates data of an article.
 | article | <code>object</code> | Shopware article model |
 | [callback] | <code>function</code> | Callback will be called with `(err, article)` |
 
+
+## Cache
+coming soon
+
 ## Categories
-yip
+coming soon
+
+## Countries
+coming soon
+
+## CustomerGroups
+coming soon
+
+## Customer
+coming soon
+
+## GenerateArticleImage
+coming soon
+
+## Media
+coming soon
+
+## Manufacturers
+coming soon
+
+## Orders
+coming soon
+
+## PropertyGroups
+coming soon
+
+## Shops
+coming soon
+
+## Translations
+coming soon
+
+## Users
+coming soon
 
 ## Variants
+coming soon
+
+## Version
+coming soon
