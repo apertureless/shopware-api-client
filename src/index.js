@@ -79,7 +79,7 @@ class Shopware {
   }
 
   getArticleByOrdernumber(ordernumber) {
-    if(!ordernumber) {
+    if (!ordernumber) {
       return handleError(ERROR.MISSING_ID)
     }
 
