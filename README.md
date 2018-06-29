@@ -82,6 +82,7 @@ Find the [docs here](https://apertureless.github.io/shopware-api-client/#/) *con
   - [new Shopware([object])](#new_shopware)
   - [.version([callback])](#version) 🔀 `Promise`
   - [.getArticles([callback])](#getArticles) 🔀 `Promise`
+  - .getArticleByOrdernumber(ordernumber, [callback]) 🔀 `Promise`
   - [.getArticle(id, [callback])](#getArticle) 🔀 `Promise`
   - [.deleteArticle(id, [callback])](#deleteArticle) 🔀 `Promise`
   - [.deleteArticles(ids, [callback])](#deleteArticles) 🔀 `Promise`
@@ -107,6 +108,7 @@ Find the [docs here](https://apertureless.github.io/shopware-api-client/#/) *con
   - .createMedia(body, [callback]) 🔀 `Promise`
   - .deleteMedia(id, [callback]) 🔀 `Promise`
   - .getOrders([callback]) 🔀 `Promise`
+  - .getOrderByOrdernumber(ordernumber, [callback]) 🔀 `Promise`
   - .getOrder(id, [callback]) 🔀 `Promise`
   - .updateOrder(id, body, [callback]) 🔀 `Promise`
   - .getAddresses([callback]) 🔀 `Promise`
