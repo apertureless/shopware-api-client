@@ -894,6 +894,18 @@ class Shopware {
     })
   }
 
+  updateTranslations(body) {
+    if (!body) {
+      return handleError(ERROR.MISSING_BODY)
+    }
+
+    return this.handleRequest({
+      url: `translations/`,
+      method: 'PUT',
+      body
+    })
+  }
+
   deleteTranslation(id) {
     if (!id) {
       return handleError(ERROR.MISSING_ID)

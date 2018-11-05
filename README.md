@@ -154,6 +154,7 @@ Find the [docs here](https://apertureless.github.io/shopware-api-client/#/) *con
   - .getTranslation(id, [callback]) 🔀 `Promise`
   - .createTranslation(id, body, [callback]) 🔀 `Promise`
   - .updateTranslation(id, body, [callback]) 🔀 `Promise`
+  - .updateTranslations(body, [callback]) 🔀 `Promise`
   - .deleteTranslation(id, [callback]) 🔀 `Promise`
 
 ## Contributing
