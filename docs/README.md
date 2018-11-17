@@ -27,6 +27,7 @@
   - [.version([callback])](#version) 🔀 `Promise`
   - [.getArticles([callback])](#getArticles) 🔀 `Promise`
   - [.getArticle(id, [callback])](#getArticle) 🔀 `Promise`
+  - [.getArticleByOrdernumber(ordernumber, [callback])](#getArticleByOrdernumber) 🔀 `Promise`
   - [.deleteArticle(id, [callback])](#deleteArticle) 🔀 `Promise`
   - [.deleteArticles(ids, [callback])](#deleteArticles) 🔀 `Promise`
   - [.createArticle(article, [callback])](#createArticle) 🔀 `Promise`
@@ -147,6 +148,18 @@ Returns an object with article data.
 | [callback] | <code>function</code> | Callback will be called with `(err, articles)` |
 
 <a name="deleteArticle"></a>
+
+### shop.getArticleByOrdernumber(ordernumber, [callback]) ⇒ <code>Promise</code>
+Returns an object with article data.
+
+**See**: https://developers.shopware.com/developers-guide/rest-api/api-resource-article/
+
+| Param | Type | Description |
+| --- | --- | --- |
+| ordernumber | <code>string</code> | Article ordernumber |
+| [callback] | <code>function</code> | Callback will be called with `(err, articles)` |
+
+<a name="getArticleByOrdernumber"></a>
 
 ### shop.deleteArticle(id, [callback]) ⇒ <code>Promise</code>
 Deletes an article and returns it's data.
