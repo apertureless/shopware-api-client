@@ -79,7 +79,7 @@ Find the [docs here](https://apertureless.github.io/shopware-api-client/#/) *con
 ## API Reference
 
 - Shopware
-  - [new Shopware([object])](#new_shopware)
+  - [new Shopware([object])](https://github.com/apertureless/shopware-api-client/tree/master/docs#new_shopware)
   - [.version([callback])](#version) 🔀 `Promise`
   - [.getArticles([callback])](#getArticles) 🔀 `Promise`
   - .getArticleByOrdernumber(ordernumber, [callback]) 🔀 `Promise`
