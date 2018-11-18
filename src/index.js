@@ -8,6 +8,10 @@ const ERROR = {
   MISSING_BODY: {
     code: 'missing_body',
     message: 'Missing a proper `body` parameter'
+  },
+  MISSING_ORDERNUMBER: {
+    code: 'missing_ordernumber',
+    message: 'Missing `ordernumber` parameter'
   }
 }
 
@@ -80,7 +84,7 @@ class Shopware {
 
   getArticleByOrdernumber(ordernumber) {
     if (!ordernumber) {
-      return handleError(ERROR.MISSING_ID)
+      return handleError(ERROR.MISSING_ORDERNUMBER)
     }
 
     return this.handleRequest({

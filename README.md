@@ -79,15 +79,15 @@ Find the [docs here](https://apertureless.github.io/shopware-api-client/#/) *con
 ## API Reference
 
 - Shopware
-  - [new Shopware([object])](#new_shopware)
-  - [.version([callback])](#version) 🔀 `Promise`
-  - [.getArticles([callback])](#getArticles) 🔀 `Promise`
-  - .getArticleByOrdernumber(ordernumber, [callback]) 🔀 `Promise`
-  - [.getArticle(id, [callback])](#getArticle) 🔀 `Promise`
-  - [.deleteArticle(id, [callback])](#deleteArticle) 🔀 `Promise`
-  - [.deleteArticles(ids, [callback])](#deleteArticles) 🔀 `Promise`
-  - [.createArticle(article, [callback])](#createArticle) 🔀 `Promise`
-  - [.updateArticle(id, article, [callback])](#updateArticle) 🔀 `Promise`
+  - [new Shopware([object])](https://github.com/apertureless/shopware-api-client/tree/master/docs#new_shopware)
+  - [.version([callback])](https://github.com/apertureless/shopware-api-client/tree/master/docs#version) 🔀 `Promise`
+  - [.getArticles([callback])](https://github.com/apertureless/shopware-api-client/tree/master/docs#getArticles) 🔀 `Promise`
+  - [.getArticleByOrdernumber(ordernumber, [callback])](https://github.com/apertureless/shopware-api-client/tree/master/docs#getArticleByOrdernumber) 🔀 `Promise`
+  - [.getArticle(id, [callback])](https://github.com/apertureless/shopware-api-client/tree/master/docs#getArticle) 🔀 `Promise`
+  - [.deleteArticle(id, [callback])](https://github.com/apertureless/shopware-api-client/tree/master/docs#deleteArticle) 🔀 `Promise`
+  - [.deleteArticles(ids, [callback])](https://github.com/apertureless/shopware-api-client/tree/master/docs#deleteArticles) 🔀 `Promise`
+  - [.createArticle(article, [callback])](https://github.com/apertureless/shopware-api-client/tree/master/docs#createArticle) 🔀 `Promise`
+  - [.updateArticle(id, article, [callback])](https://github.com/apertureless/shopware-api-client/tree/master/docs#updateArticle) 🔀 `Promise`
   - .updateArticles(articles, [callback]) 🔀 `Promise`
   - .getCategories([callback]) 🔀 `Promise`
   - .getCategory(id, [callback]) 🔀 `Promise`
