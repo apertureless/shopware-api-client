@@ -89,8 +89,8 @@
     "xo": "^0.18.2"
   },
   "dependencies": {
-    "request": "^2.87.0",
-    "request-promise-native": "^1.0.4"
+    "request": "^2.84.0",
+    "request-promise-native": "^1.0.5"
   },
   "nyc": {
     "reporter": [
