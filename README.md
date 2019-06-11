@@ -31,7 +31,7 @@ let articles
 try {
   articles = await shop.getArticles()
 } catch (err) {
-  console.log(error)
+  console.log(err)
 }
 
 console.log(articles)
