@@ -8,13 +8,14 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp transpile",
-    "prepublish": "npm run build",
+    "prepublish": "npm run snyk-protect && npm run build",
     "cover": "nyc --reporter lcov --reporter text npm run test",
     "check-coverage": "nyc check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
     "report-coverage": "cat ./coverage/lcov.info | codecov",
     "lint": "xo",
     "test-only": "ava --timeout=30s",
-    "test": "npm run lint && ava --timeout=30s --verbose"
+    "test": "npm run lint && ava --timeout=30s --verbose",
+    "snyk-protect": "snyk protect"
   },
   "engines": {
     "node": ">=6.9.0"
@@ -90,7 +91,8 @@
   },
   "dependencies": {
     "request": "^2.87.0",
-    "request-promise-native": "^1.0.4"
+    "request-promise-native": "^1.0.4",
+    "snyk": "^1.316.1"
   },
   "nyc": {
     "reporter": [
@@ -98,5 +100,6 @@
       "lcov",
       "text"
     ]
-  }
+  },
+  "snyk": true
 }
