@@ -1,4 +1,4 @@
-# 🛍 Shopware API Client
+# 🛍 Shopware 5 API Client
 
 [![npm version](https://badge.fury.io/js/shopware-api-client.svg)](https://badge.fury.io/js/shopware-api-client)
 [![Build Status](https://travis-ci.org/apertureless/shopware-api-client.svg?branch=master)](https://travis-ci.org/apertureless/shopware-api-client)
@@ -6,7 +6,7 @@
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/apertureless/shopware-api-client/blob/master/LICENSE.txt)
 
-Node.js module to interact with the [Shopware REST API](https://shopware.com/).
+Node.js module to interact with the [Shopware 5 REST API](https://developers.shopware.com/developers-guide/rest-api/).
 
 ```bash
 yarn add shopware-api-client
